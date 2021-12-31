@@ -2,12 +2,9 @@
 
 <h3>LayoutViewDemonstrate</h3>
 
-<LayoutView Layout="LayoutType">
-    <div>Content inside LayoutView</div>
+<LayoutView Layout="typeof(DarkLayout)">
+    <Index></Index>
 </LayoutView>
-<button type="button" class="layout-selector" @onclick="() => LayoutType = typeof(DarkLayout)">Dark Layout</button>
-<button type="button" class="layout-selector" @onclick="() => LayoutType = typeof(LightLayout)">Light Layout</button>
-
-@code {
-    public Type LayoutType { get; set; } = typeof(DarkLayout);
-}
+<LayoutView Layout="typeof(LightLayout)">
+    <Index></Index>
+</LayoutView>
